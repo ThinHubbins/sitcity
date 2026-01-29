@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,15 +9,22 @@ import forsale3 from "../assets/img/forsale3.jpg";
 
 const Carousel1 = () => {
   const sliderRef = useRef(null);
-  useEffect(() => {
+    const [slidesToShow, setSlidesToShow] = useState(1);
+
+useEffect(() => {
   const handleResize = () => {
-    sliderRef.current?.slickGoTo(0);
-    sliderRef.current?.innerSlider?.onWindowResized();
+    const width = window.innerWidth;
+
+    if (width >= 1024) {
+      setSlidesToShow(3.5);
+    } else if (width >= 600) {
+      setSlidesToShow(2);  
+    } else {
+      setSlidesToShow(1);  
+    }
   };
 
-  // force recalculation after mount
-  setTimeout(handleResize, 0);
-
+  handleResize(); 
   window.addEventListener("resize", handleResize);
 
   return () => window.removeEventListener("resize", handleResize);
@@ -62,43 +69,17 @@ const Carousel1 = () => {
     },
   ];
 
-  var settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3.5,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  const settings = {
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: slidesToShow, // 👈 controlled by React
+  slidesToScroll: 1,
+};
+
   return (
-    <div className="containers">
+    <div className="container">
      
         <div className="container-fluid">
           <div className="row g-0">
@@ -136,11 +117,11 @@ const Carousel1 = () => {
         <Slider ref={sliderRef} {...settings}>
           {slides.map((slide, i) => (
             <div
-              className="container-fluid px-3 mt-4 d-flex justify-content-center position-relative chairCon"
+              className="container-fluid px-3 mt-4 d-flex justify-content-center position-relative"
               key={i}
               style={{ minHeight: "300px" }}
             >
-              <img 
+              <img
                 className="img-fluid rounded chairCarousel"
                 src={slide.image}
                 alt={`forsale${i}`}

@@ -261,6 +261,12 @@ body {
   object-fit: cover;
   font-family: "K2D", sans-serif;
 }
+.carousel-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .carousel-price {
   font-family: "K2D", sans-serif;
   white-space: nowrap;
