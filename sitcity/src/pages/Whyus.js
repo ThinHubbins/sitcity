@@ -7,10 +7,7 @@ import box from "../assets/img/box-fill.svg";
 
 const Whyus = () => {
   return (
-    <div data-aos="fade-left"
-     data-aos-duration="500"className="container" style={{
-      overflowY: 'hidden'
-     }}>
+    <div className="container">
      
         <div
           className="row"
