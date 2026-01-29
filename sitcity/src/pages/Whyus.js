@@ -7,7 +7,8 @@ import box from "../assets/img/box-fill.svg";
 
 const Whyus = () => {
   return (
-    <div className="container">
+    <div className="container ">
+      <div data-aos="fade-left" data-aos-delay="200">
      
         <div
           className="row"
@@ -147,6 +148,7 @@ const Whyus = () => {
                 level of excellence in every detail.
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

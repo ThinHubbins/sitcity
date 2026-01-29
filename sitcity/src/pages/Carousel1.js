@@ -84,7 +84,7 @@ const Carousel1 = () => {
     ],
   };
   return (
-    <div className="container">
+    <div className="containers">
      
         <div className="container-fluid">
           <div className="row g-0">
