@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,6 +9,20 @@ import forsale3 from "../assets/img/forsale3.jpg";
 
 const Carousel1 = () => {
   const sliderRef = useRef(null);
+  useEffect(() => {
+  const handleResize = () => {
+    sliderRef.current?.slickGoTo(0);
+    sliderRef.current?.innerSlider?.onWindowResized();
+  };
+
+  // force recalculation after mount
+  setTimeout(handleResize, 0);
+
+  window.addEventListener("resize", handleResize);
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
   const slides = [
     {
       image: forsale1,
@@ -122,11 +136,11 @@ const Carousel1 = () => {
         <Slider ref={sliderRef} {...settings}>
           {slides.map((slide, i) => (
             <div
-              className="container-fluid px-3 mt-4 d-flex justify-content-center position-relative"
+              className="container-fluid px-3 mt-4 d-flex justify-content-center position-relative chairCon"
               key={i}
               style={{ minHeight: "300px" }}
             >
-              <img
+              <img 
                 className="img-fluid rounded chairCarousel"
                 src={slide.image}
                 alt={`forsale${i}`}
