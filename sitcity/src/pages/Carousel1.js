@@ -8,27 +8,51 @@ import forsale2 from "../assets/img/forsale2.jpg";
 import forsale3 from "../assets/img/forsale3.jpg";
 
 const Carousel1 = () => {
+  const [more, setMore] = useState(false);
   const sliderRef = useRef(null);
-    const [slidesToShow, setSlidesToShow] = useState(1);
+  const [slidesToShow, setSlidesToShow] = useState(1);
 
-useEffect(() => {
-  const handleResize = () => {
-    const width = window.innerWidth;
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
 
-    if (width >= 1024) {
-      setSlidesToShow(3.5);
-    } else if (width >= 600) {
-      setSlidesToShow(2);  
-    } else {
-      setSlidesToShow(1);  
-    }
-  };
+      if (width >= 1024) {
+        setSlidesToShow(3.5);
+      } else if (width >= 600) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(1);
+      }
+    };
 
-  handleResize(); 
-  window.addEventListener("resize", handleResize);
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const slides2 = [
+    {
+      image: forsale1,
+      name: "Green Beyani Chair",
+      address: "Montego Heights",
+      price: "450 USD",
+    },
+    {
+      image: forsale2,
+      name: "Blue Beyani Chair",
+      address: "Santa Anna",
+      price: "750 USD",
+    },
+    {
+      image: forsale3,
+      name: "Bour Couple Chair",
+      address: "Amani Crested",
+      price: "700 USD",
+    },
+  ];
 
   const slides = [
     {
@@ -70,50 +94,51 @@ useEffect(() => {
   ];
 
   const settings = {
-  dots: false,
-  arrows: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: slidesToShow, // 👈 controlled by React
-  slidesToScroll: 1,
-};
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+  };
 
   return (
-    <div className="container">
-     
-        <div className="container-fluid">
-          <div className="row g-0">
-            <div className="col-6 text-white d-flex justify-content-start carousel">
-              <div className="carousel-header text-start">
-                <span
-                  style={{
-                    fontWeight: "273",
-                    fontSize: "24px",
-                  }}
-                >
-                  DISCOVER SIT CITY
-                </span>
-                <p>
-                  EXPLORE OUR <br /> LUXURY CHAIRS
-                </p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-end align-items-end">
-              <div
-                className="text-center view"
+    <div className="container" id="Pricing">
+      <div className="container-fluid">
+        <div className="row g-0">
+          <div className="col-6 text-white d-flex justify-content-start carousel">
+            <div className="carousel-header text-start">
+              <span
                 style={{
-                  width: "146.33px",
-                  height: "44.32px",
-                  background: "#FFFFFF",
-                  padding: "10px 20px",
-                  borderRadius: "40px",
+                  fontWeight: "273",
+                  fontSize: "24px",
                 }}
               >
-                View More
-              </div>
+                DISCOVER SIT CITY
+              </span>
+              <p>
+                EXPLORE OUR <br /> LUXURY CHAIRS
+              </p>
+            </div>
+          </div>
+          <div className="col-6 d-flex justify-content-end align-items-end">
+            <div
+              onClick={() => setMore(!more)}
+              className="text-center view"
+              style={{
+                width: "146.33px",
+                height: "44.32px",
+                background: "#FFFFFF",
+                padding: "10px 20px",
+                borderRadius: "40px",
+              }}
+            >
+              View <span className={`${more ? 'lesser' : ''}`}>More</span>
             </div>
           </div>
         </div>
+      </div>
+      <div className={`carou ${more ? "carou2" : ""}`}>
         <Slider ref={sliderRef} {...settings}>
           {slides.map((slide, i) => (
             <div
@@ -204,7 +229,85 @@ useEffect(() => {
             </div>
           ))}
         </Slider>
-        <div className="container">
+      </div>
+      <div className={`carou2 ${more ? "carou2-open" : ""}`}>
+        <div className="container-fluid px-3 mt-4">
+          <div className="row justify-content-center">
+            {slides2.map((slide, i) => (
+              <div key={i} className="col-12 col-md-6 col-lg-4 mb-4">
+                <div className="position-relative">
+                  <img
+                    className="img-fluid rounded chairCarousel w-100"
+                    src={slide.image}
+                    alt={`forsale${i}`}
+                  />
+                  <div
+                    className="position-absolute"
+                    style={{
+                      bottom: "3%",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      background: "rgba(255, 255, 255, 0.55)",
+                      boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                      backdropFilter: "blur(4px)",
+                      borderRadius: "12px",
+                      padding: "0.5rem 1rem",
+                      width: "82%",
+                      height: "55px",
+                    }}
+                  >
+                    <div className="row align-items-center">
+                      <div className="col-7">
+                        <div
+                          className="carousel-name"
+                          style={{
+                            fontSize: "15px",
+                            fontWeight: "600",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          {slide.name}
+                        </div>
+
+                        <div
+                          className="carousel-address mt-1"
+                          style={{
+                            fontSize: "11.63px",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          <i className="bi bi-geo-alt-fill me-1"></i>
+                          {slide.address}
+                        </div>
+                      </div>
+
+                      <div className="col-5 d-flex justify-content-end">
+                        <div
+                          className="carousel-price"
+                          style={{
+                            width: "70px",
+                            height: "30px",
+                            background: "#fff",
+                            borderRadius: "11px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            fontSize: "12px",
+                          }}
+                        >
+                          ${slide.price}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className={`container ${more ? "carou2" : ""}`}>
         <div className="arrow-row row my-4">
           <div className="col-6 d-flex justify-content-end">
             <div onClick={() => sliderRef.current.slickPrev()}>

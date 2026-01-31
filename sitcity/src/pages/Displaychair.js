@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
 const Displaychair = () => {
-    const [grow, setGrow] = useState(false)
+  const [grow, setGrow] = useState(false);
   return (
-    <div className='container'>
+    <div className="container">
       <div className="row d-flex justify-content-center align-items-center mt-5">
         <div
           onClick={() => setGrow(!grow)}
@@ -11,12 +11,12 @@ const Displaychair = () => {
           style={{
             height: grow ? "600px" : "113px",
             transition: "height 1s ease",
-            objectFit: "cover",
+            objectFit: "contain",
           }}
         ></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Displaychair
+export default Displaychair;

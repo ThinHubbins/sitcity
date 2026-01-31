@@ -1,25 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
-window.addEventListener('load', ()=>{
-  const loader = document.getElementById('page-loader')
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
 
-  if(loader){
-    loader.style.opacity = '0'
-    loader.style.transition = 'opacity 2s ease'
-    setTimeout(()=> loader.remove(), 500)
+  if (loader) {
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 2s ease";
+    setTimeout(() => loader.remove(), 500);
   }
-})
-
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

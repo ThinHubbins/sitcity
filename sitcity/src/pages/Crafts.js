@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import centercouch from "../assets/img/centerchair.png";
 
 const Crafts = () => {
   return (
-    <div className="container">
+    <div id="About" className="container">
       <div className="row">
         <div className="col-12 centerchair1 col-xl-6">
           <div className="img-wrapper">
@@ -11,7 +11,7 @@ const Crafts = () => {
               className="centerchair img-fluid"
               src={centercouch}
               alt="centercouch"
-              style={{ maxWidth: "100%", height: "auto", marginTop: '20%' }}
+              style={{ maxWidth: "100%", height: "auto", marginTop: "20%" }}
             />
             <div className="black"></div>
           </div>
@@ -28,7 +28,7 @@ const Crafts = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Crafts
+export default Crafts;

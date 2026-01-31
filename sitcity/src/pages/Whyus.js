@@ -9,7 +9,6 @@ const Whyus = () => {
   return (
     <div className="container ">
       <div>
-     
         <div
           className="row"
           style={{
@@ -149,10 +148,9 @@ const Whyus = () => {
               </div>
             </div>
           </div>
-          </div>
         </div>
       </div>
-
+    </div>
   );
 };
 

@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import halfcircle from "../assets/img/halfcircle.svg";
 import footerChair from "../assets/img/footerChair.svg";
 
 const Footer = () => {
   return (
     <div>
-      <footer
+      <footer id="Contact"
         className="container mb-3 text-center text-white position-relative"
-        style={{ marginTop: "20%"}}
+        style={{ marginTop: "20%" }}
       >
         <img
           src={halfcircle}
@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
