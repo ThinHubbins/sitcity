@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import chairemoji from "../assets/img/chairemoji.svg";
 import time from "../assets/img/time-fill.svg";
 import diamond from "../assets/img/diamond.svg";
 import couchfill from "../assets/img/couch-fill.svg";
 import box from "../assets/img/box-fill.svg";
+import { gsap } from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Whyus = () => {
+  useEffect(() => {
+    gsap.to(".slideNow", {
+      x: -5,
+      duration: 3,
+      scrollTrigger: {
+        trigger: ".slideNow",
+        start: "top 130%",
+      },
+    });
+  }, []);
   return (
-    <div className="container ">
-      <div>
+    <div className="container" style={{ overflow: "hidden" }}>
+      <div className="slideNow">
         <div
           className="row"
           style={{
