@@ -45,7 +45,7 @@ This project was completed as an **assigned internship project** for the **Front
 * **CSS** – Custom styling
 * **Bootstrap** – Layout and responsiveness
 * **React Slick** – Carousel and slider functionality
-* **GSAP** – Animations and transitions
+* **GSAP** – Animations
 
 ---
 
