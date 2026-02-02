@@ -11,7 +11,6 @@ const Displaychair = () => {
           style={{
             height: grow ? "600px" : "113px",
             transition: "height 1s ease",
-            objectFit: "contain",
           }}
         ></div>
       </div>

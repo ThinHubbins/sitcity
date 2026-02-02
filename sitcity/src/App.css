@@ -336,6 +336,7 @@ a:hover {
   background-size: cover;
   border-radius: 24px;
   cursor: pointer;
+  background-position: center;
 }
 .reviews {
   font-family: "K2D", sans-serif;

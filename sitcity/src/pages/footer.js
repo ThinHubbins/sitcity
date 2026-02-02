@@ -23,32 +23,32 @@ const Footer = () => {
         >
           <div className="col-12 col-md-6 col-xl-3 flex-column d-flex justify-content-center  text-start gap-4">
             <div className="footerLinks">Sit City</div>
-            <a href="/" className="footerLink mt-3">
+            <a href="#Home" className="footerLink mt-3">
               Home
             </a>
-            <a href="/" className="footerLink">
+            <a href="#Product" className="footerLink">
               Products
             </a>
-            <a href="/" className="footerLink">
+            <a href="#About" className="footerLink">
               About
             </a>
-            <a href="/" className="footerLink">
+            <a href="#Pricing" className="footerLink">
               Pricing
             </a>
-            <a href="/" className="footerLink">
+            <a href="#Reviews" className="footerLink">
               Reviews
             </a>
           </div>
 
           <div className="col-12 col-md-6 col-xl-3 flex-column d-flex text-start gap-4">
             <div className="footerLinks">Legal</div>
-            <a href="/" className="footerLink mt-3">
+            <a href="#Home" className="footerLink mt-3">
               Terms and condition
             </a>
-            <a href="/" className="footerLink">
+            <a href="#Home" className="footerLink">
               License and Agreement
             </a>
-            <a href="/" className="footerLink">
+            <a href="#Home" className="footerLink">
               Payment and install
             </a>
           </div>
@@ -57,10 +57,10 @@ const Footer = () => {
             <a href="/" className="footerLink mt-3">
               <i className="bi bi-telephone-fill icn"></i>+234 123 4567 890
             </a>
-            <a href="/" className="footerLink">
+            <a href="https://www.whatsapp.com/" target="_blank" rel="noreferrer" className="footerLink">
               <i className="bi bi-whatsapp icn"></i>+234 123 6278 8289
             </a>
-            <a href="/" className="footerLink">
+            <a href="https://mail.google.com" target="_blank" rel="noreferrer" className="footerLink">
               <i className="bi bi-envelope icn"></i>sitcity@gmail.com
             </a>
             <a href="/" className="footerLink">
