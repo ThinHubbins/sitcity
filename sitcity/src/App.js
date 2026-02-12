@@ -9,13 +9,15 @@ import Whyus from "./Routes/Components/Whyus";
 import Displaychair from "./Routes/Pages/Displaychair";
 import Testimonial from "./Routes/Components/Testimonial";
 import Crafts from "./Routes/Pages/Crafts";
-
+import { Routes, Route } from "react-router-dom";
 import About from "./Routes/Pages/About";
 
 function App() {
   return (
     <div> 
-      
+      <Routes>
+        <Route path="/" element={
+          <>
       <Home />
       <Crafts />
       <Center />
@@ -24,9 +26,11 @@ function App() {
       <Displaychair />
       <Testimonial />
       <Footer />
-     
-      <About />
-      
+       </> 
+      }
+       />
+      <Route path="/about" element={<About />} />
+      </Routes>
      
     </div>
   );
