@@ -1,6 +1,6 @@
 import React from "react";
-import centerhero1 from "../assets/img/centerhero1.png";
-import centerhero2 from "../assets/img/centerhero2.png";
+import centerhero1 from "../../assets/img/centerhero1.png";
+import centerhero2 from "../../assets/img/centerhero2.png";
 
 const Centerchair = () => {
   return (

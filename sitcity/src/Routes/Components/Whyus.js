@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import chairemoji from "../assets/img/chairemoji.svg";
-import time from "../assets/img/time-fill.svg";
-import diamond from "../assets/img/diamond.svg";
-import couchfill from "../assets/img/couch-fill.svg";
-import box from "../assets/img/box-fill.svg";
+import chairemoji from "../../assets/img/SVG/chairemoji.svg";
+import time from "../../assets/img/SVG/time-fill.svg";
+import diamond from "../../assets/img/SVG/diamond.svg";
+import couchfill from "../../assets/img/SVG/couch-fill.svg";
+import box from "../../assets/img/SVG/box-fill.svg";
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";

@@ -2,10 +2,10 @@ import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import left from "../assets/img/left.svg";
-import forsale1 from "../assets/img/forsale1.jpg";
-import forsale2 from "../assets/img/forsale2.jpg";
-import forsale3 from "../assets/img/forsale3.jpg";
+import left from "../../assets/img/SVG/left.svg";
+import forsale1 from "../../assets/img/forsale1.jpg";
+import forsale2 from "../../assets/img/forsale2.jpg";
+import forsale3 from "../../assets/img/forsale3.jpg";
 
 const Carousel1 = () => {
   const [more, setMore] = useState(false);

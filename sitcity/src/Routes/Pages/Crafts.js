@@ -1,5 +1,5 @@
 import React from "react";
-import centercouch from "../assets/img/centerchair.png";
+import centercouch from "../../assets/img/centerchair.png";
 
 const Crafts = () => {
   return (

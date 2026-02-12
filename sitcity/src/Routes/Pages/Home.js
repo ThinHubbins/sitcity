@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import chair from "../assets/img/chairMain.png";
-import arrow from "../assets/img/contactarr.svg";
-import couch1 from "../assets/img/couch.png";
-import couch2 from "../assets/img/couch2.png";
-import couch3 from "../assets/img/couch3.png";
+import chair from "../../assets/img/chairMain.png";
+import arrow from "../../assets/img/SVG/contactarr.svg";
+import couch1 from "../../assets/img/couch.png";
+import couch2 from "../../assets/img/couch2.png";
+import couch3 from "../../assets/img/couch3.png";
+import { Link } from "react-router-dom";
 const Home = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -18,9 +19,9 @@ const Home = () => {
               <a href="#Product" className="navlink">
                 Products
               </a>
-              <a href="#About" className="navlink">
+              <Link to={'/about'} className="navlink">
                 About
-              </a>
+              </Link>
               <a href="#Pricing" className="navlink">
                 Pricing
               </a>

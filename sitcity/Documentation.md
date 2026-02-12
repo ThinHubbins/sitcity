@@ -28,9 +28,6 @@ This project was completed as an **assigned internship project** for the **Front
 * **Modern Navigation UI**
   Custom navigation design with animated interactions (non-standard burger-style menu).
 
-* **Pan & Interactive Display Effects**
-  Interactive visual effects to create an immersive browsing experience.
-
 * **Responsive Design**
   Fully optimized for desktop, tablet, and mobile screen sizes.
 

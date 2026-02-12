@@ -1,6 +1,6 @@
 import React from "react";
-import halfcircle from "../assets/img/halfcircle.svg";
-import footerChair from "../assets/img/footerChair.svg";
+import halfcircle from "../../assets/img/SVG/halfcircle.svg";
+import footerChair from "../../assets/img/SVG/footerChair.svg";
 
 const Footer = () => {
   return (

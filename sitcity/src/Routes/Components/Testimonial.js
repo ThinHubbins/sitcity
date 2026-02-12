@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import left from "../assets/img/left.svg";
-import review1 from "../assets/img/reviews/review1.png";
-import review1pfp from "../assets/img/reviews/review1pfp.png";
-import review2 from "../assets/img/reviews/review2.png";
-import review2pfp from "../assets/img/reviews/review2pfp.png";
-import review3 from "../assets/img/reviews/review3.png";
-import review3pfp from "../assets/img/reviews/review3pfp.png";
+import left from "../../assets/img/SVG/left.svg";
+import review1 from "../../assets/img/reviews/review1.png";
+import review1pfp from "../../assets/img/reviews/review1pfp.png";
+import review2 from "../../assets/img/reviews/review2.png";
+import review2pfp from "../../assets/img/reviews/review2pfp.png";
+import review3 from "../../assets/img/reviews/review3.png";
+import review3pfp from "../../assets/img/reviews/review3pfp.png";
 
 const Testimonial = () => {
   const sliderRef2 = useRef(null);
